@@ -14,7 +14,7 @@ const tyrannosaurus = {
   weight: '7000kg',
   length: '12m',
   period: 'Late Cretaceous',
-  roar: function() {
+  roar: () => {
     return "RAWERSRARARWERSARARARRRR!";
   }
 }
@@ -94,7 +94,7 @@ The resulting contact information strings should have a space between the first 
 Log the result of your new array. */
 const contactInfo = [];
 
-graduates.map(function(student) {
+graduates.map((student) => {
   contactInfo.push(`${student.first_name} ${student.email}`);
 });
 
@@ -136,7 +136,7 @@ The zoos want to display both the scientific name and the animal name in front o
 */
 const displayNames = [];
 
-zooAnimals.forEach(function(animal) {
+zooAnimals.forEach((animal) => {
   displayNames.push(`Name:  ${animal.animal_name}, Scientific Name:  ${animal.scientific_name}`);
 });
 
@@ -150,7 +150,7 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 
 const lowCaseAnimalNames = [];
 
-zooAnimals.map(function(animal) {
+zooAnimals.map((animal) => {
   lowCaseAnimalNames.push(animal.animal_name.toLowerCase())
 });
 
@@ -161,7 +161,9 @@ console.log(lowCaseAnimalNames);
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
 
 */
-const lowPopulationAnimals = [];
+const lowPopulationAnimals = zooAnimals.filter((popSize) => {
+  return popSize.population < 5;
+});
 console.log(lowPopulationAnimals);
 
 /* Request 4: .reduce() 
