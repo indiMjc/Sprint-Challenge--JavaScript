@@ -32,11 +32,25 @@ Edit this document to include your answers after each question. Make sure to lea
 
 2. What is the difference between a function and a method?
 
+They are both functions but a standard function exists on the global scope.  A method is nested inside an object.
+
 3. What is closure?
+
+Explained in functions.js
 
 4. Describe the four rules of the 'this' keyword.
 
+1. Window binding - using 'this' in the global scope, 'this' refers to the window object.
+
+2. Implicit binding - when using dot notation, 'this' refers to (or binds to) whatever is left of the dot.
+
+2. Explicit binding - call() and apply() when we use these methods, 'this' is bound to whatever is in the parenthesis.
+
+4. New binding - we use 'this' inside constructors.  Then when we invoke the constructor the 'new' keyword is bound to the object we are creating.
+
 5. Why do we need super() in an extended class?
+
+super() tells the constructor to pull in properties from another constructor and initiates prototypical inheritance.  extends is used in conjunction to tell super() where to look.
 
 ## Project Set up
 
